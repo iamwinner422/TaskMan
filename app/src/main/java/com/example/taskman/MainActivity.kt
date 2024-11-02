@@ -52,21 +52,27 @@ fun TaskApp( modifier: Modifier = Modifier) {
             contentScale = ContentScale.Crop,
             contentDescription = "Task is Done",
         )
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            Text(
-                text = stringResource(R.string.title),
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(top = 24.dp, bottom = 8.dp),
-                textAlign = TextAlign.Center
-            )
-            Text(
-                text = stringResource(R.string.subtitle),
-                fontSize = 16.sp,
-                textAlign = TextAlign.Center
-            )
-        }
+        InformationText()
+
+    }
+}
+
+@Composable
+fun InformationText(){
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Text(
+            text = stringResource(R.string.title),
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(top = 24.dp, bottom = 8.dp),
+            textAlign = TextAlign.Center
+        )
+        Text(
+            text = stringResource(R.string.subtitle),
+            fontSize = 16.sp,
+            textAlign = TextAlign.Center
+        )
     }
 }
 
